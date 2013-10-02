@@ -1,0 +1,69 @@
+/* 
+ * SASS Variables 
+ * 		color
+ *		string
+ *		boolean
+ *		multi-value
+ */
+h1, h2 {
+  color: red; }
+
+#mypara {
+  font-size: 18px;
+  border: 1px solid red;
+  padding: 14px 14px 14px 14px; }
+
+#mypara:after {
+  content: " with an append string"; }
+
+/* 
+ * Nested Variables 
+ * 		 
+ *		 
+ *		 
+ *		 
+ */
+body {
+  color: yellow; }
+  body p#mypara {
+    color: blue !important; }
+  body p#mypara2 {
+    color: olive !important; }
+  body p#mypara3 {
+    color: turquoise !important; }
+
+#mypara,
+#mypara2,
+#mypara3 {
+  color: #404040 !important;
+  border: 1px solid #404040;
+  padding: 10px; }
+  #mypara:hover,
+  #mypara2:hover,
+  #mypara3:hover {
+    color: orange !important; }
+
+/* 
+ * SASS Mixins
+ * 		 
+ *		 
+ *		 
+ *		 
+ */
+#mypara {
+  font-size: 24px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8); }
+
+/* 
+ * SASS Operators
+ * 		 
+ *		 
+ *		 
+ *		 
+ */
+#mypara2 {
+  background: blue !important;
+  border-right: solid 10px magenta !important;
+  border-left: 17px solid olivedrab !important;
+  padding: 10px 0 0 110px !important; }
