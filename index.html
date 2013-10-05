@@ -42,11 +42,11 @@
 
 	<header>
 		
-		<!-- Main Navigation Bar -->
-	 	<nav class="navbar">
+		<!-- Main Navigation - TwitterBootstrap (hide on mobile) -->
+	 	<nav class="navbar hidemobile">
 	        <div class="navbar-inner">
 	        	<!-- Responsive Nav Bar -->
-	            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <a class="btn btn-navbar menu-trigger" data-toggle="collapse" data-target=".nav-collapse">
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
@@ -64,6 +64,32 @@
 	            
 	        </div>
 	    </nav>
+		
+		<!-- Main Navigation - jPanelMenu -->
+	 	<nav class="navbar hidefullscreen" id="mymenu">
+	        <div class="navbar-inner">
+	        	<!-- Responsive Nav Bar -->
+	            <a class="btn btn-navbar menu-trigger">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </a>
+	        
+	            <!-- Brand -->
+				<h1>SCROLLING<span>PORT</span><span class="jobtitle">HTML5, Twitter Bootstrap, and SASS</span></h1>	            <!-- tell it what to hide -->
+	            <div id="mymenu">   
+	                <ul class="nav">
+						<li><a class="link-1 entypo-home active" href="#about"></a></li>
+						<li><a class="link-2 entypo-picture" href="#skills"></a></li>
+						<li><a class="link-3 entypo-user" href="#contact"></a></li>
+	                </ul>
+	            </div>
+	            
+	        </div>
+	    </nav>
+
+
+
 	</header>
 
 	<section class="container-fluid" id="maincontent">
@@ -155,7 +181,7 @@
 				<div class="span6 offset3" id="form_container">
                     
                     <p class="lead" id="contactimg">
-                        <img src="/images/faceshot.jpg" alt="" class="img-circle"/>
+                        <!--<img src="/images/faceshot.jpg" alt="" class="img-circle"/>-->
                     </p>
 
 					<form class="contact_form span12" id="feedback" action="feedback.php" enctype="multipart/form-data" method="post">
@@ -188,7 +214,24 @@
 
 		</section>
 	</section>
+	<!-- jPanel Menu (my custom mods) -->
+	<script src="js/my_jPanelMenu.js"></script>	
+	<script type="text/javascript">
 
+		jQuery(document).ready(function($){
+
+		    //////// JPanel Menu
+		    var jPM = jQuery.jPanelMenu({
+		        menu: '#mymenu',
+		        trigger: '.menu-trigger'
+
+		    });
+		    jPM.on();
+		});
+
+
+
+	</script>
 
 
 	</body>

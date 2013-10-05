@@ -512,8 +512,9 @@ section p {
 }
 .navbar-inner .nav {
     float:right !important;
-    width:237px;
+    width:237px; 
 }
+
  /* Media Queries */
 @media screen and (min-width:1px) and (max-width:980px){
     
@@ -531,8 +532,31 @@ section p {
         padding:50px 10% 60px 5% !important;
 
     }
+    
+    /* jPanelMenu Modifications to play well w/ Bootstaps toggle */
+    .hidemobile {
+      display:none !important;
+    }
+    
+    #jPanelMenu-menu h1 {
+        display:none !important;
+    }
+
+    .navbar-inner .nav {
+        display:none !Important;
+    }
+
+    #jPanelMenu-menu .navbar-inner .nav {
+        display:block !Important;
+    }
 
 } 
+
+@media screen and (min-width:981px) and (max-width: 10000px){
+  .hidefullscreen {
+    display:none !important;
+  }
+}
  
 @media screen and (min-width:1px) and (max-width:530px){
 
@@ -552,7 +576,7 @@ section p {
     }
     
     .navbar .btn-navbar {
-        margin:10px !Important;
+        margin:10px !important;
         height:40px !important;
         width:40px !important; 
     }
