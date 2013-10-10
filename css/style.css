@@ -24,6 +24,8 @@ Global Reset & Standards ---------------------- */
     -webkit-font-smoothing: antialiased; 
     /* RES. TYPEFACE */
     font-size:110%!important;line-height: 1.6875;
+
+
 }
 
 /*--------------------------------------------------------------
@@ -76,6 +78,9 @@ body, ul, li {
 
 body {
   background: none;
+  background: #000;
+ 
+
 }
 
 .center {
@@ -124,6 +129,7 @@ header h1 .jobtitle {
 
 header nav ul {
   padding:0 !important;
+  margin:0 !important;
   height: auto !important;
   width:262px !important;
   float: right;
@@ -133,41 +139,61 @@ header nav ul li {
   margin:0 !important;
   height: auto;
   display: inline-block;
-  
+    background-color: none !important;
+
 }
 
 header nav ul li a {
-  min-height: 60px !important; 
+   height:80px;
+   width:80px;
   display: block;
   padding: 17px 20px;
   color: white;
   font-size: 2.2em;
   text-decoration: none !important;
-  -webkit-transition: color 1s ease;
+  /*-webkit-transition: color 1s ease;
   -moz-transition: color 1s ease;
   -o-transition: color 1s ease;
-  transition: color 1s ease;
+  transition: color 1s ease;*/
+
+  -webkit-transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+  -ms-transition:all .2s ease-in-out;  
+  transition:all .2s ease-in-out;
   
 }
+header nav ul li a.about{
+  background: url("/projects/portfolio/images/icon_about.png") no-repeat !important;
+  background-position:top center;
+}
+header nav ul li a.skills {
+  background: url("/projects/portfolio/images/icon_skills.png") no-repeat !important;
+  background-position:top center;
+}
+header nav ul li a.contact { 
+  background: url("/projects/portfolio/images/icon_contact.png") no-repeat !important;
+  background-position:top center;
+}  
 
 header nav ul li a:hover{
   color: #373948;
+  background-position: bottom center !important;
+
 }
 
 header nav ul li a.active{
-  min-height: 60px !important; 
   border-bottom: none;
 }
 
 header nav ul li a.link-1,
 header nav ul li a.link-2,
 header nav ul li a.link-3 { 
-    background: #ccc; 
+  background-color: none !important;
     margin:1px 1px;
 }
 
 nav ul li a.active { background: #43CCCD;background:rgba(33,201,198,1);}
-
 
 
 section {
@@ -175,11 +201,45 @@ section {
   height: auto;
   box-sizing: border-box;
   padding: 20px;
-  overflow: hidden;
+  overflow: auto !important;
 }
 
 article#about { background:#f7f7f7; margin-top: 70px;min-height:1200px;margin:0;padding:50px 10% 60px 10%;}
-article#skills { background:  #51778C url(../images/mountains.jpg)  70% -1px no-repeat;min-height:1200px;margin:0;padding:50px 10% 60px 10%; }
+article#skills { 
+    background: #51778C url(../images/mountains.jpg)  70% -1px no-repeat;
+    min-height:1200px;
+    margin:0;
+    padding:50px 10% 60px 10%;
+    overflow:auto !important;
+}
+article#skills .port {
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+
+    width: 1500px !important;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+article#skills .port2 {
+    width:12000px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    
+
+
+    width: 12000px !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
 article#contact { background:url(../images/stripe4.png) repeat !important;min-height:1200px;margin:0;padding:50px 10% 60px 10%;}
 
 article#about h2, 
@@ -205,12 +265,99 @@ article#skills ul {
 }
 
 article#skills li {
+    position:relative;
     list-style-type:none;
     padding:8px;
     margin:0 0 0 10px;
     border-left:solid #333333 2px;
 }
+/* Skills Naviagation */
 
+#options  {
+     width: auto;
+     z-index: 300;
+     position:absolute;
+     left:0;
+     top:100px;
+}
+
+#options ul  {
+     margin:  0;
+     list-style:  none;
+     display: inline-block;
+     padding-top: 0px;
+ }
+
+#options li  {
+    margin: 0px !important;
+    padding: 0px !important
+  }
+
+#options li a, #options li a:active  {
+     color: #fff;
+     font-size: 18px;
+     font-weight: normal;
+     text-decoration: none;
+     display: inline-block;
+     padding: 10px 20px;
+      margin: 0px;
+    -webkit-transition:  all 0.8s ease 0s;
+     -moz-transition:  all 0.8s ease 0s;
+     -o-transition:  all 0.8s ease 0s;
+     transition:  all 0.8s ease 0s;
+     
+ }
+
+#options li a:hover{
+    color: #fff !important;
+     font-size: 18px !important;
+     padding: 20px 40px !important;
+     text-align: left !important;
+}
+
+/*Color Swatches*/
+.reveal-color-one{
+  color: #e74c3c !important;
+}
+.reveal-color-two{
+  color: #3498db !important;
+}
+.reveal-color-three{
+  color: #2ecc71 !important;
+}
+.reveal-color-four{
+  color: #8e44ad !important;
+}
+.reveal-bg-one{
+  background: #e74c3c !important;
+}
+.reveal-bg-two{
+  background: #3498db !important;
+}
+.reveal-bg-three{
+  background: #2ecc71 !important;
+}
+.reveal-bg-four{
+  background: #8e44ad !important;
+}
+.reveal-bg-five{
+  background: #1abc9c !important;
+}
+.reveal-bg-six{
+  background: #f1c40f !important;
+}
+.reveal-bg-seven{
+  background: #E671B5 !important;
+}
+.reveal-bg-eight{
+  background: #E56C19 !important;
+}
+.reveal-bg-nine{
+  background: #34495e !important;
+}
+.reveal-bg-ten{
+  background: #83BA1F !important;
+}
 
 #about #bioimg  {text-align:center;margin:40px 120px 60px 0;}
 #about #bioimg img {
@@ -505,14 +652,15 @@ section p {
 }
 
 .navbar-inner .nav li {
-    padding:16px 0 0 0;
-    background:#CCCCCC !important;
+    padding:0px 0 0 0;
+    background:none !important;
     height:84px; 
+    width:84px;
     margin:1px 2px !important;
 }
 .navbar-inner .nav {
     float:right !important;
-    width:237px; 
+    width:307px !important; 
 }
 
  /* Media Queries */
@@ -591,3 +739,87 @@ section p {
  }
 
  
+
+
+
+/* Skills - Side scroll */
+
+#skills  .section{
+    margin:0px;
+    bottom:0px;
+    width:1500px; 
+    float:left !important;
+    text-shadow:1px 1px 2px #f0f0f0;
+    min-height:1200px !important;
+
+}
+
+#skills .section h2{
+    margin:50px 0px 30px 50px;
+}
+
+#skills .section p{
+    margin:20px 0px 0px 50px;
+    width:600px;
+}
+
+.port1{
+    color:#fff;
+   
+    background:none;
+}
+.white{
+    color:#000;
+    background:#fff url(__../images/white.jpg) no-repeat top right;
+}
+.port3{
+    color:#000;
+    background:#fff url(http://michaelbowlin.com/images/web_kgic/100_port_canvas_kgic.jpg) no-repeat top right;
+}
+
+#skills .section ul{
+    list-style:none;
+    margin:20px 0px 0px 550px;
+}
+.port1 ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.port1 ul li a{
+    display:block;
+    color:#f0f0f0;
+}
+.port1 ul li a:hover{
+    text-decoration:none;
+    color:#fff;
+}
+.white ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.white ul li a{
+    display:block;
+    color:#222;
+}
+.white ul li a:hover{
+    text-decoration:none;
+    color:#000;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

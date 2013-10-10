@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--This is Mikey's addition -->
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Scroling Portfolio</title>
@@ -30,7 +29,8 @@
         <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
         <script src="js/custom.js"></script>
 		<script type="text/javascript" src="ajaxform/ajax_submit.js"></script>
-	</head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>		
+    <script type="text/javascript" src="jquery.easing.1.3.js"></script>	</head>
 
     <body>
         <!--[if lt IE 7]>
@@ -56,9 +56,9 @@
 				<h1>SCROLLING<span>PORT</span><span class="jobtitle">HTML5, Twitter Bootstrap, and SASS</span></h1>	            <!-- tell it what to hide -->
 	            <div class="nav-collapse">   
 	                <ul class="nav">
-						<li><a class="link-1 entypo-home active" href="#about"></a></li>
-						<li><a class="link-2 entypo-picture" href="#skills"></a></li>
-						<li><a class="link-3 entypo-user" href="#contact"></a></li>
+						<li><a class="link-1 active about" href="#about"></a></li>
+						<li><a class="link-2 skills" href="#skills"></a></li>
+						<li><a class="link-3 contact" href="#contact"></a></li>
 	                </ul>
 	            </div>
 	            
@@ -87,12 +87,10 @@
 	            
 	        </div>
 	    </nav>
-
-
-
 	</header>
 
 	<section class="container-fluid" id="maincontent">
+
 		<section class="row-fluid">
 			
 			<article class="span12" id="about">
@@ -133,44 +131,53 @@
 			
 			<article class="span12" id="skills" style="position:relative;">
 				<section class="span5">
-					<h2>Skills</h2>
-					<p>
 
-						<ul>
-							<li>HTML5</li>
-							<li>CSS3</li>
-							<li>JS/jQuery</li>
-							<li>Backbone.js</li>
-							<li>PHP/MySQL</li>
-							<li>Adobe CS6</li>
-						</ul>
-					</p>
+
+					<!-- Skills Nav -->
+				    <nav id="options" class="clearfix visible-desktop">
+				      <ul id="filters" class="option-set clearfix" data-option-key="filter">
+				        <li><a class="reveal-bg-one selected" href="#section1">Skills</a></li>
+				        <li><a class="reveal-bg-two" href="#section2">Design</a></li>
+				        <li><a class="reveal-bg-three" href="#section3">Development</a></li>
+				        <li><a class="reveal-bg-six" href="#filter=.blog">GitHub</a></li>
+				        <li><a class="reveal-bg-five" href="#filter=.contact">CodePen</a></li>
+				      </ul>
+				    </nav>	
+
+					<h2>Skills</h2>
+					<div class="port">
+						<div class="port2">
+
+					        <div class="section port1" id="section1">
+
+
+					        </div>
+					        <div class="section white" id="section2">
+					            <h2>Section 2</h2>
+					            <p>
+					                ‘A fathomless and boundless deep,
+					                There we wander, there we weep;
+					                On the hungry craving wind
+					                My Spectre follows thee behind.
+
+					            </p>
+
+					        </div>
+					        <div class="section port3" id="section3">
+					            <h2>Section 3</h2>
+					            <p>
+					                ‘He scents thy footsteps in the snow
+					                Wheresoever thou dost go,
+					                Thro’ the wintry hail and rain.
+					                When wilt thou return again?
+
+					            </p>
+
+					        </div>
+					    </div>
+				    </div>
 				</section>
 
-				
-		        <section class="span7" id="pagecontent">
-		            <div>
-		                <h1>SASSy Sample Document</h1>
-		                <h2>Heading 2</h2>
-		                <h3>Heading 3</h3>
-		                <h4>Heading 4</h4>
-		            </div>
-		            <div>
-		                <p id="mypara">MY PARA 1</p>
-		                <p id="mypara2">MY PARA 2</p>
-		                <p id="mypara3">MY PARA 3</p>
-		            </div>
-		            <div>
-		                <ul id="list1">
-		                <li>List Item 1</li>
-		                <li>List Item 2</li>
-		                <li>List Item 3</li>
-		                <li>List Item 4</li>
-		                <li>List Item 5</li>
-		                <li>List Item 6</li>
-		                </ul>
-		            </div>
-			    </section>	
 
 			</article>
 
@@ -227,11 +234,14 @@
 
 		    });
 		    jPM.on();
+
+
 		});
 
 
 
-	</script>
+
+    </script>
 
 
 	</body>
